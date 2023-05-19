@@ -1,0 +1,24 @@
+<div class="buttondiv">
+    <button class="add-btn" (click)="showForm()">Add Student</button>
+</div>
+<div class="form-group" *ngIf="shouldShow">
+    <h2>Add Student</h2>
+    <form  #studentForm="ngForm" (ngSubmit)="addStudent()" >
+        <div class="input-group">
+            <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" [(ngModel)]="student.name" #name>
+        </div>
+        <div class="input-group">
+            <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age" #age [(ngModel)]="student.age">
+        </div>
+        <div class="input-group">
+            <label for="fee">Fee</label>
+        <input type="number" class="form-control" id="fee" placeholder="Enter Fee" name="fee" #fee [(ngModel)]="student.fee">
+        </div>
+        <div class="buttondiv">
+            <button type="submit">Add Student</button>
+        </div>
+        
+    </form>
+</div>

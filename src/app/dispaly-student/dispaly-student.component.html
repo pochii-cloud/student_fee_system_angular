@@ -1,0 +1,45 @@
+<header>
+    <h2 style="margin-bottom: 20px;">Students</h2>
+</header>
+<div class="students">
+    <div class="all-students" *ngFor="let student of students">
+        <!-- check for student with balance and style them differently using ngclass -->
+        <div class="student-card" [ngClass]="{'with-balance': student.fee > 0}">
+            <div class="student-name">
+                <h3>Name : {{student.name}}</h3>
+            </div>
+            <div class="student-age">
+                <h3>Age : {{student.age}}</h3>
+            </div>
+            <div class="student-fee">
+                <h3>Fee : {{student.fee}}</h3>
+            </div>
+            <div class="buttondiv">
+                <button (click)="updateStudent(student)">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group" *ngIf="showFormForUpdate">
+    <h2>Update Student</h2>
+    <form  #studentForm="ngForm" (ngSubmit)="addStudent()" >
+        <div class="input-group">
+            <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" [(ngModel)]="student.name" #name>
+        </div>
+        <div class="input-group">
+            <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age" #age [(ngModel)]="student.age">
+        </div>
+        <div class="input-group">
+            <label for="fee">Fee</label>
+        <input type="number" class="form-control" id="fee" placeholder="Enter Fee" name="fee" #fee [(ngModel)]="student.fee">
+        </div>
+        <div class="buttondiv">
+            <button type="submit" class="btn btn-primary">update </button>
+        </div>
+        
+    </form>
+</div>

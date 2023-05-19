@@ -1,0 +1,100 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.students{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.all-students{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.student-card{
+    width: 250px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.with-balance{
+    background-color: #f30808;
+   
+}
+
+.without-balance{
+    background-color: white
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 30%;
+    margin:auto;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: black;
+    color: white;
+    margin-top: 5%;
+}
+.form-group h2{
+    text-align: center;
+    color: white;
+}
+.input-group {
+    margin-bottom: 1rem;
+    width: 50%;
+    margin: 0% auto;
+    padding: 2%;
+    border-radius: 5px;
+ 
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: rgb(61, 11, 179);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.buttondiv{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
